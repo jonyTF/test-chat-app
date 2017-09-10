@@ -12,6 +12,7 @@ io.on('connection', function(socket) {
 		console.log('user disconnected');
 	});
 	socket.on('chat message', function(msg) {
+		console.log('received chat message');
 		io.emit('chat message', msg);
 	});
 	socket.on('add user', function(nickname) {
